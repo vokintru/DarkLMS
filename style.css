@@ -1,0 +1,272 @@
+:root {
+    --color-text-main: #9d9d9d;
+    --color-text-secondary: grey;
+    --color-text-heading: #ddd;
+    --color-text-invert: #fff;
+    --color-text-control: #000;
+    --color-text-status: #333;
+    --color-text-warning: #eb0909;
+    --color-text-positive: #29a629;
+    --color-spinner-label: grey;
+    --color-background-main: #1d1d1d;
+    --color-background-menu: #191919;
+    --color-background-tooltip: #444;
+    --color-background-panel: #1f1f1f;
+    --color-background-active: #ffeba0;
+    --color-background-notification-center: #1a1a1a;
+    --color-separator: #212121;
+    --color-separator-dark: hsla(0, 0%, 100%, 0.3);
+    --color-outline: #fc0;
+    --color-control-active: #1f1f1f;
+    --color-control-hover: #171717;
+    --color-control-outline: #111111;
+    --color-control-outline-hover: #b3b3b3;
+    --color-checked-checkbox: #ffdb4d;
+    --color-checked-checkbox-hover: #ffd633;
+    --color-link: #cccccc;
+    --color-link-hover: #4d4d4d;
+    --color-link-grey: grey;
+    --color-link-grey-hover: #999;
+    --color-ticker: #ffdb4d;
+    --color-button-active: #f3f1ed;
+    --color-button-ok: #2db32d;
+    --color-button-ok-hover: #29a629;
+    --color-button-ok-active: #2b992b;
+    --color-button-action: #ffdb4d;
+    --color-button-action-hover: #ffd633;
+    --color-button-action-active: #fc0;
+    --color-indicator-dark-green: #2db32d;
+    --color-indicator-green: #a8de00;
+    --color-indicator-red: #ff5959;
+    --color-indicator-dark-grey: #ccc;
+    --color-indicator-grey: rgba(0, 0, 0, 0.08);
+    --color-indicator-white: #fff;
+    --color-indicator-yellow: #ffdd61;
+    --color-indicator-dot-red: #ff5959;
+    --color-indicator-dot-dark-grey: #ccc;
+    --color-header-accepted: #2db32d;
+    --color-header-accepted-after-deadline: #accd8c;
+    --color-header-rework: #ff5959;
+    --color-status-ok: #2b992b;
+   - -color-status-redo: #eb0c0c;
+    --color-status-active: #ffeba0;
+    --color-status-waiting: #eb9c3d;
+    --color-status-accepted-after-deadline: #accd8c;
+    --color-table-cell-text: #000;
+    --color-table-button-border: #979797;
+    --color-task-status-ok: #2eb72e;
+    --color-task-status-waiting: #ffc800;
+    --color-task-status-redo: #ff5959;
+    --color-notification-error: #ff5959;
+    --color-notification-success: #29a629;
+    --color-comments-form-background: #1a1a1a;
+    --color-comments-own-background: #1c1c1c;
+    --color-comments-after-deadline-text: #fb0006;
+    --color-comments-after-deadline-border: #fb0006;
+    --color-comments-own-active-background: #ffeba0;
+    --color-comments-list-box-shadow: rgba(0, 0, 0, 0.08);
+    --color-schedule-events-outline: #6c6c6c;
+    --color-schedule-secondary-text: #a8a8a8;
+    --color-schedule-event-elective: #d1f0d0;
+    --color-schedule-event-elective-hover: #b4e6b2;
+    --color-schedule-event-lesson: #e6e6e6;
+    --color-schedule-event-lesson-hover: #d9d9d9;
+    --color-schedule-event-reserve: #fce68e;
+    --color-schedule-event-reserve-hover: #fedf6f;
+    --color-schedule-event-vacation: #fce68e;
+    --color-schedule-event-vacation-hover: #fedf6f;
+    --color-schedule-event-vacation-text: #eb0c0c;
+    --color-schedule-event-test: #d1ebff;
+    --color-schedule-event-test-hover: #a3d6ff;
+    --color-schedule-event-skip: #eb0c0c;
+    --color-schedule-event-selected-text: #fff;
+    --color-schedule-event-selected-background: #666;
+    --color-schedule-event-edited-background: #f5f5f5;
+    --color-schedule-unassigned-events-list: #000;
+    --opacity-schedule-event-passed: 0.6;
+    --color-filter-label-background: #dddcff;
+    --color-filter-label-border: #c5c2f2;
+    --color-filter-clear-label-background: #1a1a1a;
+    --color-filter-clear-label-border: #ccc;
+    --color-filter-clear-label-text: #eb0c0c;
+    --color-filter-value-separator: #8682c7;
+    --color-tag-blue: #247ba0;
+    --color-tag-green: #70c1b3;
+    --color-tag-red: #f25f5c;
+    --color-variant-status-not-assigned: rgba(0, 0, 0, 0.08);
+    --color-variant-status-not-solved: #0090e6;
+    --color-variant-status-is-solving: rgba(0, 144, 230, 0.3);
+    --color-variant-status-has-solved: #777;
+    --color-student-graduated: #ffc100;
+    --color-student-expelled: #ff5959;
+    --color-antiplagiary-red: #eb0c0c;
+    --color-antiplagiary-yellow: #ffdd61;
+    --color-antiplagiary-grey: rgba(0, 0, 0, var(--icon-grey-opacity));
+    --color-antiplagiary-mark: #333;
+    --color-merge-deletes: rgba(255, 0, 0, 0.2);
+    --color-merge-additions: rgba(155, 185, 85, 0.2);
+}
+body {
+    background-color: #1c1c1c;
+}
+
+.Accordion {
+    border: 1px solid #212121;
+}
+
+
+.Accordion-Item {
+    border-top: 1px solid #212121;
+    border-bottom: 0;
+}
+
+.student-task-list__task-heading{
+  color: #ffffff
+}
+
+.ya-chat-widget_theme_dark.ya-chat-widget_desktop.ya-chat-widget_theme_light,
+.ya-chat-widget_theme_light.ya-chat-widget_desktop.ya-chat-widget_theme_light {
+    display: none;
+}
+
+.material__chapter code,
+.material__chapter samp,
+.material__chapter var {
+    color: darkgray;
+}
+
+.material__annotation {
+    background-color: #131313;
+}
+
+.material__annotation h2,
+.material__annotation p {
+    color: #dddd;
+}
+
+.popup2_theme_normal:before {
+    background: transparent;
+}
+
+.user2__menu.user2__menu {
+    background: #1d1d1d;
+}
+
+.user2__menu-footer {
+    background: #1a1a1a;
+}
+
+.y6c2ac--task-description__content table:not(.sample-tests) {
+    display: none;
+}
+
+.student-task-list__task:hover {
+    background: #1a1a1a;
+    transition: transform 0.2s ease-in-out;
+    transform: scale(1.02);
+}
+
+
+.header__left{
+
+}
+
+
+.CodeMirror {
+    color: #ddd;
+}
+
+.course-card{
+  color: #fff
+}
+
+.main-nav__current-course{
+  color: #ffffff
+}
+
+.lesson-card{
+  color: #ffffff
+}
+
+.Link_view_lyceum.Link_theme_normal{
+  color: #fff
+}
+
+.task-preview__task-name{
+  color: #fff
+}
+
+.user_account{
+  color: #ffffff
+}
+
+.material-list__material-link{
+  color: #ffffff
+}
+
+.CodeMirror-gutters {
+    border-right: 1px solid #2f2f2f;
+}
+
+.cm-s-default .cm-def {
+    color: #ffcc00;
+    opacity: 0.8;
+}
+
+.cm-s-default .cm-builtin {
+    color: #42aaff;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+	height: 4px;
+    outline: none;
+}
+::-webkit-scrollbar-thumb {
+    background: #0f0f0f;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-track {
+    background: #1f1f1f;
+}
+
+.Sideblock_theme_normal .Sideblock-Content {
+    background: #1a1a1a;
+}
+
+.language-css .token.string, .style .token.string, .token.entity, .token.operator, .token.url {
+    background: none;
+}
+
+code[class*=language-], pre[class*=language-] {
+    text-shadow: none;
+}
+
+.material__comment-heading, .material__note-heading {
+    color: #1f1f1f;
+}
+
+.material__note p,
+.material__note li {
+    color: #3f3f3f;
+}
+
+.material__note var {
+    color: #1d1d1d;
+    font-weight: bold;
+}
+
+.material__note {
+    border-radius: 10px;
+}
+
+
+.material__illustration[src*=svg] {
+    filter: brightness(0.8) invert(1);
+}
+.courses__list-item:nth-child(1) .course-card__title {
+	/*Your code should go under this comment*/
+}
+.logo__link {
+	/*Your code should go under this comment*/
+}
