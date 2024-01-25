@@ -1,25 +1,30 @@
 {
   "manifest_version": 3,
   "name": "DarkLMS",
-  "version": "0.1",
-  "permissions": [
-    "activeTab"
-  ],
+  "version": "0.2",
   "content_scripts": [
     {
-      "matches": ["https://lms.yandex.ru/*"],
-      "css": ["style.css"]
+      "matches": [
+        "https://lms.yandex.ru/*"
+      ],
+      "css": [
+        "style.css"
+      ],
+      "js": [
+        "site.js"
+      ]
     }
   ],
   "action": {
-  "default_popup": "popup.html",
-  "default_icon": {
-    "16": "img/icon16.png",
-    "48": "img/icon48.png",
-    "128": "img/icon128.png"
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "img/icon16.png",
+      "48": "img/icon48.png",
+      "128": "img/icon128.png"
     }
   },
-    "permissions": [
+  "permissions": [
+    "storage",
     "activeTab",
     "storage"
   ]
