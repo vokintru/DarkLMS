@@ -6,6 +6,7 @@ chrome.storage.sync.get('enabled', function (data) {
         styleElement.textContent = `
             :root {
                 --color-text-main: #9d9d9d !important;
+                --color-text-control: white !important;
                 --color-text-secondary: grey !important;
                 --color-text-heading: #ddd !important;
                 --color-text-invert: #fff !important;
@@ -286,17 +287,30 @@ chrome.storage.sync.get('enabled', function (data) {
             .Checkbox_view_lyceum.Checkbox_theme_normal {
                 color: #fff !important;
             }
+            .main-nav__course-link {
+                color: #fff !important;
+            }
+            .main-nav__courses-link {
+                color: #fff !important;
+            }
+            .nav-tab_view_button {
+                border: 1px solid #fff
+            }
+            .Button2_theme_pseudo {
+                border: 1px solid #fff;
+                border-radius: 4px;
+            }
         `;
 
         document.head.appendChild(styleElement);
 
-
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         // Получаем элемент div по классу
         var logoDiv = document.querySelector('.logo.logo_lang_ru');
 
         // Заменяем URL в атрибуте background-image
-        logoDiv.style.backgroundImage = 'url()';
+        logoDiv.style.backgroundImage = '';
 
         // Ваш готовый SVG-код
         var svgCode = '<a class="logo__link logo__link_type_service" title="Лицей" href="/"></a><svg xmlns="http://www.w3.org/2000/svg" width="205" height="52" viewBox="0 0 1027 110" fill="none">\n' +
@@ -306,5 +320,90 @@ chrome.storage.sync.get('enabled', function (data) {
 
         // Вставляем SVG-код внутрь div
         logoDiv.innerHTML = svgCode;
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        
+        // Получаем элемент div по классу
+        var logoDiv = document.querySelector('.icon_type_arrow-dropdown.icon_size_xs');
+
+        // Заменяем URL в атрибуте background-image
+        logoDiv.style.backgroundImage = '';
+
+        // Ваш готовый SVG-код
+        var svgCode = "<svg width='10' height='6' xmlns='http:/\/\www.w3.org/2000/svg'><g fill='none' fill-rule='evenodd'><path d='M0-2h10V8H0z'/><path fill='#ffffff' d='M10 0H0l5 6z'/></g></svg>";
+
+        // Вставляем SVG-код внутрь div
+        logoDiv.innerHTML = svgCode;
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        var logoDivs = document.querySelectorAll('.indicator_color_grey');
+
+        // Проходим по каждому элементу и применяем изменения
+        logoDivs.forEach(function(logoDiv) {
+            logoDiv.style.background = '#ffffff'; // Изменяем фон
+            logoDiv.innerHTML = ''; // Очищаем содержимое
+        });
+
+        }
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        
+        // Получаем элемент div по классу
+        var logoDiv = document.querySelector('.icon_type_arrow-short.icon_size_s');
+
+        // Заменяем URL в атрибуте background-image
+        logoDiv.style.backgroundImage = '';
+
+        // Ваш готовый SVG-код
+        var svgCode = '<svg width="16" height="16" fill="none" xmlns="http:/\/\www.w3.org/2000/svg"><path d="M8 9.585l4.793-4.79a1 1 0 0 1 1.414 1.415l-5.5 5.496a1 1 0 0 1-1.414 0l-5.5-5.496a1 1 0 0 1 1.414-1.415L8 9.585z" fill="#FFF"/></svg>';
+
+        // Вставляем SVG-код внутрь div
+        logoDiv.innerHTML = svgCode;
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        
+        document.querySelector('.icon_type_search').style.filter = 'invert(100%)';
+        document.querySelector('.icon_type_signal-outline').style.filter = 'invert(100%)';
+
+
+});
+
+chrome.storage.sync.get('enabled-baners', function (data) {
+    var run = data['enabled-baners'] || false;
+    console.log(run)
+    //setTimeout(function() {}, 1000);
+    if (run) {
+        // Находим все элементы с классом 'course-banners js'
+        var elements = document.querySelectorAll('.course-banners');
+
+        // Проходим по каждому найденному элементу и удаляем его
+        elements.forEach(function(element) {
+            element.remove();
+        });
+
+        ///////////////////////////////////////////////////////////////////////////////////////
+
+        // Находим элемент с классом "footer"
+        var footerElement = document.querySelector('.footer__legal');
+
+        // Проверяем, был ли найден элемент с классом "footer"
+        if (footerElement) {
+        //    // Если элемент найден, удаляем его из DOM
+            footerElement.parentNode.removeChild(footerElement);
+        }
+
+        ///////////////////////////////////////////////////////////////////////////////////////
+
+        // Находим элемент с классом "footer"
+        var footerElement = document.querySelector('.footer__controls');
+
+        // Проверяем, был ли найден элемент с классом "footer"
+        if (footerElement) {
+        //    // Если элемент найден, удаляем его из DOM
+            footerElement.parentNode.removeChild(footerElement);
+        }
+
+
         }
 });
