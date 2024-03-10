@@ -345,7 +345,6 @@ chrome.storage.sync.get('enabled', function (data) {
             logoDiv.innerHTML = ''; // Очищаем содержимое
         });
 
-        }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         
@@ -365,6 +364,7 @@ chrome.storage.sync.get('enabled', function (data) {
         
         document.querySelector('.icon_type_search').style.filter = 'invert(100%)';
         document.querySelector('.icon_type_signal-outline').style.filter = 'invert(100%)';
+        }
 
 
 });
