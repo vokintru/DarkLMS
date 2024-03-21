@@ -320,7 +320,6 @@ chrome.storage.sync.get('enabled', function (data) {
 
         // Вставляем SVG-код внутрь div
         logoDiv.innerHTML = svgCode;
-
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         
         // Получаем элемент div по классу
@@ -347,25 +346,28 @@ chrome.storage.sync.get('enabled', function (data) {
 
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        
+
         // Получаем элемент div по классу
         var logoDiv = document.querySelector('.icon_type_arrow-short.icon_size_s');
+        if (logoDiv !== null) {
 
-        // Заменяем URL в атрибуте background-image
-        logoDiv.style.backgroundImage = '';
+            // Заменяем URL в атрибуте background-image
+            logoDiv.style.backgroundImage = '';
 
-        // Ваш готовый SVG-код
-        var svgCode = '<svg width="16" height="16" fill="none" xmlns="http:/\/\www.w3.org/2000/svg"><path d="M8 9.585l4.793-4.79a1 1 0 0 1 1.414 1.415l-5.5 5.496a1 1 0 0 1-1.414 0l-5.5-5.496a1 1 0 0 1 1.414-1.415L8 9.585z" fill="#FFF"/></svg>';
+            // Ваш готовый SVG-код
+            var svgCode = '<svg width="16" height="16" fill="none" xmlns="http:/\/\www.w3.org/2000/svg"><path d="M8 9.585l4.793-4.79a1 1 0 0 1 1.414 1.415l-5.5 5.496a1 1 0 0 1-1.414 0l-5.5-5.496a1 1 0 0 1 1.414-1.415L8 9.585z" fill="#FFF"/></svg>';
 
-        // Вставляем SVG-код внутрь div
-        logoDiv.innerHTML = svgCode;
-
-        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        
-        document.querySelector('.icon_type_search').style.filter = 'invert(100%)';
-        document.querySelector('.icon_type_signal-outline').style.filter = 'invert(100%)';
+            // Вставляем SVG-код внутрь div
+            logoDiv.innerHTML = svgCode;
         }
 
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        document.querySelector('.icon_type_search').style.filter = 'invert(100%)';
+        document.querySelector('.icon_type_signal-outline').style.filter = 'invert(100%)';
+
+
+}
 
 });
 
